@@ -2,12 +2,15 @@ import React from 'react';
 import '../styles/App.css';
 import { fetchPersons } from '../services/api';
 import PersonsList from './PersonsList';
+import PersonsSearch from './PersonsSearch'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
-      allPersons: []
+      allPersons: [],
+      value: ''
     }
   }
   componentDidMount() {
@@ -18,10 +21,16 @@ class App extends React.Component {
         })
       })
   }
+  handleChange(value) {
+    this.setState({
+      value: value
+    })
+  }
 
   render() {
     return (
       <div className="App">
+        <PersonsSearch handleChange={this.handleChange} />
         <PersonsList
           allPersons={this.state.allPersons}
         />
