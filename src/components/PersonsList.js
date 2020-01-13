@@ -6,7 +6,7 @@ const PersonsList = props => {
         <div>
             <ul>
                 {props.allPersons
-                    .filter(person => props.value === '' || person.name.toLowerCase().includes(props.value))
+                    // .filter(person => props.value === '' || person.name.toLowerCase().includes(props.value))
                     .map(person => <li key={person.id}>
                         <PersonsCards
                             personImage={person.image}

@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      allPersons: [],
-      value: ''
+      value: '',
+      allPersons: []
     }
   }
   componentDidMount() {
