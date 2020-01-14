@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  background: black;
+  color: greenyellow;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+}
+
+@import "components/PersonsSearch";
+@import "components/Header";
+@import "components/PersonsList";
+@import "components/PersonsCard";
+@import "components/PersonsDetail";

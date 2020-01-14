@@ -1,0 +1,12 @@
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+    &--img {
+      box-sizing: border-box;
+      margin: 15px;
+      width: 90%;
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
+}

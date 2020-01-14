@@ -1,0 +1,25 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    @media (min-width: 500px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    &__li {
+      display: flex;
+      justify-content: center;
+    }
+}
+.person{
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/App.css';
-import { fetchPersons, fetchSinglePersons } from '../services/api';
+import '../styles/App.scss';
+import { fetchPersons } from '../services/api';
 import PersonsList from './PersonsList';
 import PersonsSearch from './PersonsSearch';
 import PersonsDetail from './PersonsDetail'
@@ -12,11 +12,9 @@ class App extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.renderPersonsDetail = this.renderPersonsDetail.bind(this);
-
     this.state = {
       allPersons: [],
       value: '',
-
     }
   }
   componentDidMount() {
@@ -32,14 +30,11 @@ class App extends React.Component {
     this.setState({
       value: value
     })
-    console.log(value)
   }
 
   renderPersonsDetail(props) {
-    console.log(props)
     const personId = parseInt(props.match.params.id);
     const person = this.state.allPersons.find(person => person.id === personId)
-    console.log(person)
     return <PersonsDetail person={person} />
   }
 
