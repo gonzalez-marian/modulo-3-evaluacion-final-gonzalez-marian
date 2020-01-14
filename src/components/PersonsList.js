@@ -3,7 +3,6 @@ import PersonsCards from './PersonsCards';
 import { Link } from 'react-router-dom';
 
 const PersonsList = props => {
-    console.log(props)
     return (
         <div>
             <ul>
@@ -20,7 +19,8 @@ const PersonsList = props => {
                             />
                         </Link>
                     </li>
-                    )}
+                    )
+                }
             </ul>
         </div >
     )
